@@ -1,0 +1,135 @@
+extends layout
+
+block content
+  .container.text-center
+    .row
+      .col-sm-3.well(style="background-color:#000000;")
+        .well(id='maps-canvas', style="background-color:#000000;")
+            
+        .well(style="background-color:#000000;")
+          p
+            a(href='#') Interests
+          p
+            a.label.label-default(href="/createSquare") Javascript
+            a
+            |  
+            span.label.label-primary Node Express JS
+            |  
+            span.label.label-success Socket.io
+            |  
+            span.label.label-info AjaX
+            |  
+            span.label.label-warning Angularjs
+            |  
+            span.label.label-danger Cordova
+            |
+            span.label.label-warning HTML5
+            |  
+            span.label.label-default CSS3
+        .alert.alert-success.fade.in
+          a.close(href='#', data-dismiss='alert', aria-label='close')
+          p
+            strong Members 
+            span.i(class="fa fa-users" aria-hidden="true")
+
+            ul
+              li #{memberName.length}
+                span.i(class="fa fa-connectdevelop" aria-hidden="true")
+              li #{memberName.length}
+                span.glyphicon.glyphicon-flash
+        .alert.alert-success.fade.in
+          a.close(href='#', data-dismiss='alert', aria-label='close')
+          p
+            strong Articles #{totalArticles}
+            span.glyphicon.glyphicon-file
+        p
+        script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+        ins.adsbygoogle(style='display:inline-block;width:200px;height:600px', data-ad-client='ca-pub-9232219840656991', data-ad-slot='6328096063')
+        script.
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        
+      .col-sm-7(style="background-color:#000000;")
+        .row
+          .col-sm-12(style="background-color:#000000;")
+            if !user
+              .panel.panel-default.text-center(style="background-color:#000000;")
+                .panel-body
+                  h1(class="flash") Welcom to proZe
+                  h2(class="flash") The fullstack JSocial network 
+                  |
+                  video(class="img" source src="/images/video.mp4" width="100%" height="100%" margin="auto" loop autoplay)
+            else
+              .panel.panel-default.text-left(style="background-color:#000000;")
+                .panel-body
+                  .h1(class="flash")
+                  |
+                  .i(class="fa fa-terminal fa-3x" aria-hidden="true") proZe galaJSy
+              
+                                                  
+            .panel.panel-default.text-center(style="background-color:#000000;")
+              .panel-body: img(src="/images/barometre.jpg" width="90%" margin="0px")
+              p langages de programmations les plus populaires
+            .panel.panel-default.text-center(style="background-color:#000000;")
+              .panel-body Best IDE for web development
+              div(id="myCarousel" class="carousel slide" data-ride="carousel")
+                ol(class="carousel-indicators")                
+                div(class="carousel-inner" role="listbox")
+                  div(class="item active")
+                    img(src="/images/ide01.png")
+                    p RJ Text ED
+                  div(class="item")
+                    img(src="/images/ide02.png")
+                    p Light Table
+                  div(class="item")
+                    img(src="/images/ide03.jpg")
+                    p Netbeans
+                  div(class="item")
+                    img(src="/images/ide04.png")
+                    p Netbeans
+                  div(class="item")
+                    img(src="/images/ide05.jpg")
+                    p Netbeans
+                  
+            .panel.panel-default.text-center(style="background-color:#000000;")
+              .panel-body Best books to learn Javascript
+              div(id="myCarousel" class="carousel slide" data-ride="carousel")
+                ol(class="carousel-indicators")                
+                div(class="carousel-inner" role="listbox")
+                  div(class="item active")
+                    img(src="/images/book01.png")
+                    p Eloquent Javascript 
+                  div(class="item")
+                    img(src="/images/book02.png")
+                    p Javascript: The good parts
+              .panel.panel-default.text-left(style="background-color:#000000;")
+                .panel-body Code Editor      
+                  textarea(id="code-editor")
+                  
+      .col-sm-2.well(style="background-color:#000000;")
+        .thumbnail(style="background-color:#000000;")
+          p Games: 
+          a(href="/signup"): div(id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="7500")
+              ol(class="carousel-indicators")                
+              div(class="carousel-inner" role="listbox")
+                div(class="item active")
+                  img(src="/images/git01.png")
+                  p Bricks
+                div(class="item")
+                  img(src="/images/git02.png")
+                  p PerryPC
+                div(class="item")
+                  img(src="/images/git03.png")
+                  p Jsumos
+          |  
+        .well(style="background-color:#000000;width:auto")
+          p.i(class="fa fa-heartbeat" aria-hidden="true")
+          div(class="fb-like" data-width="100" height="100" data-show-faces="true" class="text-center")
+        .well( style="background-color:#000000;width:auto")
+          fb:login-button(scope="public_profile,email" onlogin="checkLoginState();")
+          div(id="status")
+        .well( style="background-color:#000000;" width="160px" heigth="600px")
+          p(stytle="margin-left:0px")
+          script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+          ins.adsbygoogle(style='display:inline-block;width:150px;height:600px', data-ad-client='ca-pub-9232219840656991', data-ad-slot='6328096063')
+          script.
+            (adsbygoogle = window.adsbygoogle || []).push({});

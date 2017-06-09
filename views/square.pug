@@ -1,0 +1,14 @@
+extends ./layout
+
+block content
+  .page-header
+    .panel.panel-default.text-left(style="background-color:#000000;")
+                .panel-body
+                  div(id="chatbox-username") #{user.profile.name || user.email} 
+                  ul(class="media-list" style="height: 300px; overflow-y:scroll" id="messages")
+                   
+                  form( name="form", method="POST")
+                    label(class="error")
+                      input(type='text', placeholder='type your message', id="userMessage", name="userMessage")
+                    label
+                      button(type="submit" class="button") SEND
