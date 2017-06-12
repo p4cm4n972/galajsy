@@ -58,8 +58,8 @@ passport.use(new LocalStrategy({
  * Sign in with Facebook.
  */
 passport.use(new FacebookStrategy({
-    clientID: config.facebook.clientID,
-    clientSecret: config.facebook.clientSecret,
+    clientID: config.clientID,
+    clientSecret: config.clientSecret,
     callbackURL: '/auth/facebook/callback',
     profileFields: ['name', 'email', 'link', 'locale', 'timezone'],
     passReqToCallback: true
@@ -219,7 +219,7 @@ passport.use(new TwitterStrategy({
 passport.use(new InstagramStrategy({
     clientID: config.INSTAGRAM_ID,
     clientSecret: config.INSTAGRAM_SECRET,
-    callbackURL: '/auth/instagram/callback',
+    callbackURL: "http://localhost:3000/auth/instagram/callback",
     passReqToCallback: true
 }, function (req, accessToken, refreshToken, profile, done) {
     if (req.user) {
