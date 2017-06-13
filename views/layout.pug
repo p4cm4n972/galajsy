@@ -79,7 +79,7 @@ html(lang='fr')
         }(document, 'script', 'facebook-jssdk'));
     include partials/header
 
-    .container-fluid
+    .container
       include partials/flash
       block content
 
@@ -112,7 +112,7 @@ html(lang='fr')
     <!-- socket.io client -->
     script(src='/socket.io/socket.io.js')
     script.
-      var socket = io();
+      var socket = io.connect('http://localhost:3000');
     script(type="text/javascript" src="/javascripts/main.js")
 
     

@@ -219,7 +219,7 @@ passport.use(new TwitterStrategy({
 passport.use(new InstagramStrategy({
     clientID: config.INSTAGRAM_ID,
     clientSecret: config.INSTAGRAM_SECRET,
-    callbackURL: "http://localhost:3000/auth/instagram/callback",
+    callbackURL: "/auth/instagram/callback",
     passReqToCallback: true
 }, function (req, accessToken, refreshToken, profile, done) {
     if (req.user) {
