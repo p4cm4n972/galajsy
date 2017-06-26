@@ -28,7 +28,7 @@ var response = article();
             
             var memberName = memberArrayList;
             res.render('index', {
-                title: 'proZe',
+                title: 'GalaJSy',
                 memberName: memberName
             });
     };
