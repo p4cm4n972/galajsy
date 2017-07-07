@@ -70,11 +70,11 @@ app.use(session({
   secret: config.sessionKey,
   resave: true,
   saveUninitialized: true,
-  store: new MongoStore({
+ /* store: new MongoStore({
     url: config.dbConnstring,
     autoReconnect: true,
     clear_interval: 3600
-  })
+  })*/
 }));
 
 app.use(passport.initialize());
